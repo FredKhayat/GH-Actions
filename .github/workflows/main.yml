@@ -19,6 +19,10 @@ jobs:
       - name: Install dependencies
         run: |
           pipenv install --deploy --dev
+          
+      - name: Run black formatter
+        uses: rickstaa/action-black@v1.1.14
+        
       - name: Move to flask folder
         run: |
           cd app
